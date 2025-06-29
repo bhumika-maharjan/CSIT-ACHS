@@ -1,0 +1,17 @@
+﻿@model formvc_part2.Models.form
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+@using(var form= Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m=>m.Name)
+        @Html.TextBoxFor(m=>m.Name)
+        @Html.ValidationMessageFor(m=>m.Name)
+    </div>
+    <input type="submit" value="Submit" />
+}

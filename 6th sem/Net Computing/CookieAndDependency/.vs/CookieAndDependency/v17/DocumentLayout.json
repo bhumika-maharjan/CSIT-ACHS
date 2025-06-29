@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Bhumika\\ACHS\\6thsem\\Net Computing\\CookieAndDependency\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8EAD2A1-1DAD-4E21-B8C5-8067CC7A77AD}|CookieAndDependency.csproj|d:\\bhumika\\achs\\6thsem\\net computing\\cookieanddependency\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8EAD2A1-1DAD-4E21-B8C5-8067CC7A77AD}|CookieAndDependency.csproj|solutionrelative:controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8EAD2A1-1DAD-4E21-B8C5-8067CC7A77AD}|CookieAndDependency.csproj|d:\\bhumika\\achs\\6thsem\\net computing\\cookieanddependency\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8EAD2A1-1DAD-4E21-B8C5-8067CC7A77AD}|CookieAndDependency.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8EAD2A1-1DAD-4E21-B8C5-8067CC7A77AD}|CookieAndDependency.csproj|d:\\bhumika\\achs\\6thsem\\net computing\\cookieanddependency\\services\\myservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8EAD2A1-1DAD-4E21-B8C5-8067CC7A77AD}|CookieAndDependency.csproj|solutionrelative:services\\myservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8EAD2A1-1DAD-4E21-B8C5-8067CC7A77AD}|CookieAndDependency.csproj|d:\\bhumika\\achs\\6thsem\\net computing\\cookieanddependency\\services\\imyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8EAD2A1-1DAD-4E21-B8C5-8067CC7A77AD}|CookieAndDependency.csproj|solutionrelative:services\\imyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8EAD2A1-1DAD-4E21-B8C5-8067CC7A77AD}|CookieAndDependency.csproj|d:\\bhumika\\achs\\6thsem\\net computing\\cookieanddependency\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8EAD2A1-1DAD-4E21-B8C5-8067CC7A77AD}|CookieAndDependency.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MessageController.cs",
+              "DocumentMoniker": "D:\\Bhumika\\ACHS\\6thsem\\Net Computing\\CookieAndDependency\\Controllers\\MessageController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MessageController.cs",
+              "ToolTip": "D:\\Bhumika\\ACHS\\6thsem\\Net Computing\\CookieAndDependency\\Controllers\\MessageController.cs",
+              "RelativeToolTip": "Controllers\\MessageController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T04:18:41.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Bhumika\\ACHS\\6thsem\\Net Computing\\CookieAndDependency\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Bhumika\\ACHS\\6thsem\\Net Computing\\CookieAndDependency\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T04:17:58.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IMyService.cs",
+              "DocumentMoniker": "D:\\Bhumika\\ACHS\\6thsem\\Net Computing\\CookieAndDependency\\Services\\IMyService.cs",
+              "RelativeDocumentMoniker": "Services\\IMyService.cs",
+              "ToolTip": "D:\\Bhumika\\ACHS\\6thsem\\Net Computing\\CookieAndDependency\\Services\\IMyService.cs",
+              "RelativeToolTip": "Services\\IMyService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T04:15:08.647Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MyService.cs",
+              "DocumentMoniker": "D:\\Bhumika\\ACHS\\6thsem\\Net Computing\\CookieAndDependency\\Services\\MyService.cs",
+              "RelativeDocumentMoniker": "Services\\MyService.cs",
+              "ToolTip": "D:\\Bhumika\\ACHS\\6thsem\\Net Computing\\CookieAndDependency\\Services\\MyService.cs",
+              "RelativeToolTip": "Services\\MyService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T15:23:52.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Bhumika\\ACHS\\6thsem\\Net Computing\\CookieAndDependency\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Bhumika\\ACHS\\6thsem\\Net Computing\\CookieAndDependency\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T15:20:42.424Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

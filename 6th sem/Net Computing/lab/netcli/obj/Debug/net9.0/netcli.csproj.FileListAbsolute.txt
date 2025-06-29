@@ -1,0 +1,14 @@
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\netcli\bin\Debug\net9.0\netcli.exe
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\netcli\bin\Debug\net9.0\netcli.deps.json
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\netcli\bin\Debug\net9.0\netcli.runtimeconfig.json
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\netcli\bin\Debug\net9.0\netcli.dll
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\netcli\bin\Debug\net9.0\netcli.pdb
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\netcli\obj\Debug\net9.0\netcli.GeneratedMSBuildEditorConfig.editorconfig
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\netcli\obj\Debug\net9.0\netcli.AssemblyInfoInputs.cache
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\netcli\obj\Debug\net9.0\netcli.AssemblyInfo.cs
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\netcli\obj\Debug\net9.0\netcli.csproj.CoreCompileInputs.cache
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\netcli\obj\Debug\net9.0\netcli.dll
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\netcli\obj\Debug\net9.0\refint\netcli.dll
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\netcli\obj\Debug\net9.0\netcli.pdb
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\netcli\obj\Debug\net9.0\netcli.genruntimeconfig.cache
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\netcli\obj\Debug\net9.0\ref\netcli.dll

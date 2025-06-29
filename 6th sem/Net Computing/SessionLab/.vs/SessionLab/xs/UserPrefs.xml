@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{31CA02E7-DE5A-46FC-9AC3-87684EE4B7A5}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Student/CacheDemo.cshtml">
+    <Files>
+      <File FileName="Program.cs" Line="23" Column="1" />
+      <File FileName="Controllers/SessionController.cs" Line="27" Column="2" />
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="Controllers/TempDataController.cs" Line="24" Column="10" />
+      <File FileName="Controllers/HomeController.cs" Line="21" Column="27" />
+      <File FileName="Views/TempData/Second.cshtml" Line="8" Column="1" />
+      <File FileName="Views/TempData/Third.cshtml" Line="6" Column="1" />
+      <File FileName="Controllers/StudentController.cs" Line="62" Column="1" />
+      <File FileName="Models/StudentViewModel.cs" Line="13" Column="1" />
+      <File FileName="Views/Student/CacheDemo.cshtml" Line="22" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SessionLab" expanded="True">
+            <Node name="SessionLab" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Student" expanded="True">
+                  <Node name="CacheDemo.cshtml" selected="True" />
+                </Node>
+                <Node name="TempData" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State name="__root__">
+          <Node name="SessionLab" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.SessionLab PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>

@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<br />
+//tag helper
+<a asp-action="Create">Create</a>
+
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Salary</td>
+    </tr>
+    @foreach(var d in Model)
+    {
+        <tr>
+            <td>@d.ID</td>
+            <td>@d.Name</td>
+            <td>@d.Salary</td>
+            <td>
+                <a asp-action="Delete" asp-route-id="d.ID">Delete</a>
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="d.ID">Edit</a>
+            </td>
+        </tr>
+    }
+</table>
+    

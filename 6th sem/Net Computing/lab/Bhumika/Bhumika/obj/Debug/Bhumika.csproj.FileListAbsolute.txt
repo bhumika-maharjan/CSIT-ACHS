@@ -1,0 +1,7 @@
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\Bhumika\Bhumika\obj\Debug\Bhumika.csproj.AssemblyReference.cache
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\Bhumika\Bhumika\obj\Debug\Bhumika.csproj.CoreCompileInputs.cache
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\Bhumika\Bhumika\bin\Debug\Bhumika.exe.config
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\Bhumika\Bhumika\bin\Debug\Bhumika.exe
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\Bhumika\Bhumika\bin\Debug\Bhumika.pdb
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\Bhumika\Bhumika\obj\Debug\Bhumika.exe
+D:\Bhumika\ACHS\6thsem\Net Computing\lab\Bhumika\Bhumika\obj\Debug\Bhumika.pdb

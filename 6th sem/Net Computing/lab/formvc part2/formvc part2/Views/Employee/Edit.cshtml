@@ -1,0 +1,16 @@
+﻿@model formvc_part2.Models.Employees;
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<form method="post" asp-action="Edit">
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+    <br />
+    <input asp-for="Salary" />
+    <lspan asp-validation-for="Salary"></lspan>
+    <br />
+    <input type="submit" value="Submit" />
+</form>
+
