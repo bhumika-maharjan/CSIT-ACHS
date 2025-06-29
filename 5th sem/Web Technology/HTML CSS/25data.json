@@ -1,0 +1,28 @@
+{
+    "person": [
+        {
+            "id": 1,
+            "name": "Bhumika",
+            "age": 20,
+            "isAdmin": true,
+            "address": {              
+                "city": "Kathmandu",
+                "country": "Nepal"
+            },
+            "hobbies": ["Table tennis", "IOT"],
+            "verified": null
+        },
+        {
+            "id": 2,
+            "name": "Riya",
+            "age": 20,
+            "isAdmin": false,
+            "address": {
+                "city": "Kathmandu",
+                "country": "Nepal"
+            },
+            "hobbies": ["Badminton", "IOT"],
+            "verified": null
+        }
+    ]
+}

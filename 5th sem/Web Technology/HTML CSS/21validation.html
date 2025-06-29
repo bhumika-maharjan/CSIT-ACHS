@@ -1,0 +1,66 @@
+
+<html>
+    <head>
+        <title>Form Validation</title>
+    </head>
+    <body>
+        <form action="" name="loginform" onsubmit="return validateForm();">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username">
+            <br><br>
+            <label for="password">Password:</label>
+            <input type = "password" name="password" id="password">
+            <br> <br>
+            <label for="country">Country:</label>
+            <select name="country" id="country">
+                <option value="">Select a country</option>
+                <option value="Nepal">Nepal</option>
+                <option value="India">India</option>
+            </select>
+            <br><br>
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="M" >
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="F">
+            <label for="female">Female</label>
+            <br><br>
+            <button type="submit">Submit</button>
+
+        </form>
+        <script>
+            function validateForm(){
+                let username = document.getElementById("username").value;
+                let password = document.getElementById("password").value;
+                let country = document.getElementById("country").value;
+                let gender = document.forms["loginform"]["gender"].value;
+                
+                console.log(gender);
+                // console.log(username);
+                // return false //it wont let us submit
+                if(!username){
+                    alert("username is required");
+                    return false;
+                }else if(username.length < 4) {
+                    alert("Username should be at least 4 char long");
+                    return false;
+                }else if (!password) {
+                    alert("password is required");
+                    return false;
+                } else if (!/^[a-zA-Z]+/.test(password)){
+                    alert("Password should start with letters");
+                    return false;
+                }else if (!/#+$/.test(password)) {
+                    alert("Password should end with hash tag");
+                    return false;
+                }else if(country==""){
+                    alert("Please select a country");
+                    return false;
+                }else if (gender == "") {
+                    alert("Please select a gender");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>

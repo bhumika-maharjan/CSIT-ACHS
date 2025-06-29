@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Display: Table; CSS</title>
+    <style>
+      .table {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .row {
+        display: table-row;
+      }
+      .cell {
+        display: table-cell;
+        border: 1px solid black;
+        padding: 5px 10px;
+      }
+      .head {
+        font-weight: bold;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table">
+      <div class="row">
+        <div class="cell head">ID</div>
+        <div class="cell head">Name</div>
+      </div>
+      <div class="row">
+        <div class="cell">1</div>
+        <div class="cell">Apple</div>
+      </div>
+      <div class="row">
+        <div class="cell">2</div>
+        <div class="cell">Ball</div>
+      </div>
+    </div>
+  </body>
+</html>

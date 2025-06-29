@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Document Objects | Document Object Model</title>
+  </head>
+  <body>
+    <p class="para" id="hello">Hello</p>
+    <p class="para">Hello</p>
+    <script>
+      let x = document.getElementById("hello");
+      console.log(x);
+      let y = document.getElementsByClassName("para")[0];
+      console.log(y);
+      let z = document.getElementsByTagName("p")[0];
+      console.log(z);
+      let i = document.querySelector(".para");
+      console.log(i);
+      let j = document.querySelectorAll(".para");
+      console.log(j);
+      let k = document.querySelector("#hello");
+      console.log(k);
+      let l = document.querySelector("p");
+      console.log(l);
+
+      l.textContent = "hello world";
+      l.setAttribute("class", "para2");
+      console.log(l);
+      l.classList.add("para");
+      console.log(l);
+
+      let button = document.createElement("button");
+      button.textContent = "Submit";
+      button.className = "btn";
+      button.addEventListener("click", function () {
+        console.log("Button Clicked");
+      });
+      document.body.appendChild(button);
+
+      //   x.parentElement.removeChild(x);
+      x.parentNode.removeChild(x);
+    </script>
+  </body>
+</html>

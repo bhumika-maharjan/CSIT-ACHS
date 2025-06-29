@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Js Introduction</title>
+    <style>
+      .green {
+        color: green !important;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="text">Something</p>
+    <button onclick="document.getElementById('text').innerHTML = 'Nothing'">
+      Click Me to change Text
+    </button>
+    <button onclick="document.getElementById('text').style.color = 'red'">
+      Click Me to change Color
+    </button>
+    <button onclick="document.getElementById('text').style.display = 'none'">
+      Click Me to Hide Text
+    </button>
+    <button onclick="document.getElementById('text').className = 'green'">
+      Click Me to change class attributes
+    </button>
+    <button onclick="console.log('Clicked')">
+      Click Me to print to console
+    </button>
+    <button onclick="printToConsole()">Click Me to print to console</button>
+    <script>
+      function printToConsole() {
+        console.log("Clicked");
+      }
+
+      console.log(1 + 1);
+    </script>
+  </body>
+</html>

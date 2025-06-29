@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <style>
+            .blue{
+                color: blue;
+            }
+            .red {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nav">
+            <h2 id="title">Navbar</h2>
+            <ul>
+                <li id="home">Home</li>
+                <li id="about" class="red">About</li>
+            </ul> 
+        </div>
+        <script src="/jquery-3.7.1.min.js"></script>
+        <script>
+            // let title= $("title").text(); //selects title tag
+            let title= $("#title").text(); //selects id
+            console.log(title); 
+            jQuery("#title").text("New Navbar Title");
+
+            $("#title").html("<i>Navbar</i>");
+
+            $("ul").prepend("<h2>Bhumika Maharjan</h2>");
+            $("ul").append("<li>Project</li>");
+            $("ul").append("<li>Services</li>");
+
+            $("#nav").before("<h1>Website Title</h1>");
+            $("#nav").after("<footer>This is footer</footer>");
+
+            $("ul").css("border", "1px solid black");
+            $("#home").addClass("blue");
+            $("#about").removeClass("red");
+
+            $("#about").empty(); //empties texts
+            $("#about").remove(); //removes about
+
+            $("#nav").parent().children("footer").remove(); //removes footer
+        </script>
+    </body>
+</html>

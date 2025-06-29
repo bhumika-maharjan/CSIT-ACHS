@@ -1,0 +1,28 @@
+{
+  "persons": [
+    {
+      "id": 1,
+      "name": "Bhumika",
+      "age": 20,
+      "isAdmin": true,
+      "address": {
+        "city": "Kathmandu",
+        "country": "Nepal"
+      },
+      "hobbies": ["Table tennis", "IOT"],
+      "verified": null
+    },
+    {
+      "id": 2,
+      "name": "MIMI",
+      "age": 5,
+      "isAdmin": false,
+      "specs": {
+        "city": "Kathmandu",
+        "country": "Nepal"
+      },
+      "hobbies": ["Table tennis", "Fishing"],
+      "verified": "2024-2-2"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+<!-- Write an html code to -->
+<!-- understand and use various -->
+<!-- types of inputs -->
+
+<html>
+  <head>
+    <title>Input</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="text_ip">Text Input: </label>
+      <input type="text" id="text_ip" name="text_ip" /><br /><br />
+
+      <label for="search_ip">Search Input: </label>
+      <input type="search" id="search_ip" name="search_ip" /><br /><br />
+
+      <label for="tel_ip">Tel Input: </label>
+      <input type="tel" id="tel_ip" name="tel_ip" /><br /><br />
+
+      <label for="url_ip">Url Input: </label>
+      <input type="url" id="url_ip" name="url_ip" /><br /><br />
+
+      <label for="pass_ip">Password Input: </label>
+      <input type="password" id="pass_ip" name="pass_ip" /><br /><br />
+
+      <label for="datetime_ip">Datetime Input: </label>
+      <input type="datetime" id="datetime_ip" name="datetime_ip" /><br /><br />
+
+      <label for="date_ip">Date Input: </label>
+      <input type="date" id="date_ip" name="date_ip" /><br /><br />
+
+      <label for="month_ip">Month Input: </label>
+      <input type="month" id="month_ip" name="month_ip" /><br /><br />
+
+      <label for="week_ip">Week Input: </label>
+      <input type="week" id="week_ip" name="week_ip" /><br /><br />
+
+      <label for="time_ip">Time Input: </label>
+      <input type="time" id="time_ip" name="time_ip" /><br /><br />
+
+      <label for="datetimelocal_ip">Datetime Local Input: </label>
+      <input
+        type="datetime-local"
+        id="datetimelocal_ip"
+        name="datetimelocal_ip"
+      /><br /><br />
+
+      <label for="number_ip">Number Input: </label>
+      <input type="number" id="number_ip" name="number_ip" /><br /><br />
+
+      <label for="range_ip">Range Input: </label>
+      <input
+        onchange="handleChange(event);"
+        max="10"
+        min="5"
+        step="1"
+        type="range"
+        id="range_ip"
+        name="range_ip"
+      /><br /><br />
+
+      <label for="color_ip">Color Input: </label>
+      <input type="color" id="color_ip" name="color_ip" /><br /><br />
+
+      <label for="checkbox_ip">Checkbox Input: </label>
+      <input type="checkbox" id="checkbox_ip" name="checkbox_ip" /><br /><br />
+
+      <label for="radio_ip">Radio Input: </label>
+      <input type="radio" id="radio_ip" name="radio_ip" /><br /><br />
+
+      <label for="submit_ip">Submit Input: </label>
+      <input type="submit" id="submit_ip" name="submit_ip" /><br /><br />
+
+      <label for="number_ip">Number Input: </label>
+      <input type="number" id="_ip" name="number_ip" /><br /><br />
+
+      <label for="number_ip">Number Input: </label>
+      <input type="number" id="_ip" name="number_ip" /><br /><br />
+    </form>
+  </body>
+
+  <script>
+    const handleChange = (event) => {
+      console.log(event.target.value);
+    };
+  </script>
+</html>
+<!-- comment garna contol+slash -->
+<!-- for greater than, quotations and other symbols search for html entities in google -->

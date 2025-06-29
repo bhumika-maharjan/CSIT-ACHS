@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Window Object</title>
+  </head>
+  <body>
+    <h1>Window Object Example</h1>
+    <button id="openWindow">Open New Window</button>
+    <button id="changeLocation">Change Location</button>
+    <div style="height: 200vh"></div>
+    <script>
+      console.log(
+        "Window inner size: " + window.innerWidth + "x" + window.innerHeight
+      );
+
+      // Handling button clicks
+      document.getElementById("openWindow").addEventListener("click", () => {
+        window.open("https://www.apple.com");
+      });
+
+      document
+        .getElementById("changeLocation")
+        .addEventListener("click", () => {
+          window.location.href = "https://www.apple.com";
+        });
+
+      // Handling window events
+      window.addEventListener("resize", () => {
+        console.log(
+          "Window resized to: " + window.innerWidth + "x" + window.innerHeight
+        );
+      });
+
+      window.addEventListener("scroll", () => {
+        console.log("Window scrolled. Scroll position: " + window.scrollY);
+      });
+
+      // Storing a string
+      localStorage.setItem("username", "John Doe");
+
+      //   window.localStorage.removeItem("username");
+      // Storing an object
+      const user = {
+        name: "John Doe",
+        age: 30,
+        email: "johndoe@example.com",
+      };
+      localStorage.setItem("user", JSON.stringify(user));
+
+      // Retrieving a string
+      const username = localStorage.getItem("username");
+      console.log(username); // Output: John Doe
+
+      // Retrieving an object
+      const userRetrived = JSON.parse(localStorage.getItem("user"));
+      console.log(user); // Output: { name: 'John Doe', age: 30, email: 'johndoe@example.com' }
+    </script>
+  </body>
+</html>

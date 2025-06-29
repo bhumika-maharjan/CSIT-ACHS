@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE products SYSTEM "products.dtd">
+<products>
+    <product stock="20" category="ELECTRONICS">
+        <name>Product Name 1</name>
+        <price>19.99</price>
+        <description>A brief description of the product.</description>
+    </product>
+    <product stock="30" category="COSMETICS">
+        <name>Product Name 2</name>
+        <price>19.99</price>
+        <description>A brief description of the product.</description>
+    </product>
+</products>

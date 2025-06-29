@@ -1,0 +1,87 @@
+<!-- Create an HTML signup form with fields Name, Email, Password, and Age, -->
+<!-- Validate the form using JavaScript. Write functions for validating  -->
+<!-- each of the elements. All of the fields should not be empty.  -->
+<!-- The Email address should be a valid email, the password should be of  -->
+<!-- length at least 6 and should start with the alphabet and end with a digit.  -->
+<!-- The age should be between 8 and 60. -->
+
+<html>
+  <head>
+    <title>Form validation</title>
+  </head>
+
+  <body>
+    <h2>Client Side Form Validation Example</h2>
+    <form action="#" onsubmit="return validateForm()">    
+      <div>
+        <label> Name: </label>
+        <input type="text" name="name" id="name" />
+      </div>
+
+      <br />
+
+      <div>
+        <label> Email: </label>
+        <input type="email" name="email" id="email" />
+      </div>
+
+      <br />
+
+      <div>
+        <label> Password: </label>
+        <input type="password" name="password" id="password" />
+      </div>
+
+      <br />
+
+      <div>
+        <label> Age: </label>
+        <input type="number" step="1" name="age" id="age" />
+      </div>
+
+      <br />
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <script>
+      function validateForm() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let age = document.getElementById("age").value;
+
+        if (name == "") {
+          alert("Name is required");
+          return false;
+        }
+        if (email == "") {
+          alert("Email is required");
+          return false;
+        } else if (
+          !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(email)
+        ) {
+          alert("Email is invalid");
+          return false;
+        } else if (password == "") {
+          alert("password is required");
+          return false;
+        } else if (password.length < 6) {
+          alert("Length of password should be at least 6");
+          return false;
+        } else if (!/^[a-zA-Z]+/.test(password)) {
+          alert("password should start with alphabet");
+          return false;
+        } else if (!/\d+$/.test(password)) {
+          alert("password should end with digit");
+          return false;
+        } else if (!(age > 8 && age < 60)) {
+          alert("Age should be between 8 and 60");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>

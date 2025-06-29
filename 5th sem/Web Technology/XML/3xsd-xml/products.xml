@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product stock="20" category="Electronics">
+        <name>Product Name 1</name>
+        <price>19.99</price>
+        <description>A brief description of the product.</description>
+    </product>
+    <product stock="30" category="Cosmetics">
+        <name>Product Name 2</name>
+        <price>19.99</price>
+        <description>A brief description of the product.</description>
+    </product>
+</products>

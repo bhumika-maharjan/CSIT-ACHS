@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>JQuery vs jS</title>
+    </head>
+    <body>
+        <script src="/jquery-3.7.1.min.js"></script>
+        <script>
+            let array= [1,2,3,4,5];
+            //javascript:
+            array.forEach(function (value, index){
+                console.log(index,value);
+            })
+
+            //jQuery:
+            $.each(array,function(index,value){
+                console.log(index,value);
+            })
+
+            let obj1= {name: "john"};
+            let obj2 = {address: "lalitpur"};
+
+            let merged1 = {...obj1, ...obj2};
+            let merged2 = $.extend({}, obj1, obj2);
+            console.log(merged1, merged2);
+        </script>
+    </body>
+</html>

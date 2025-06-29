@@ -1,0 +1,151 @@
+<html>
+  <head>
+    <title>Form Validation</title>
+    <style>
+      form {
+        margin: 200px;
+      }
+      button {
+        cursor: pointer;
+      }
+      .input_container {
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+      }
+      .error {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: red;
+        font-size: 14px;
+        margin: 0;
+        display: none;
+      }
+      .error.show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      id="form"
+      action="17form-validation.html"
+      onsubmit="return validate();"
+    >
+      <div class="input_container">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" placeholder="John Doe" />
+        <p class="error" id="name_error"></p>
+      </div>
+
+      <div class="input_container">
+        <label for="username">Username: </label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="john-doe-123"
+        />
+        <p class="error" id="username_error"></p>
+      </div>
+
+      <div class="input_container">
+        <label for="email">Email: </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="johndoe@email.com"
+        />
+        <p class="error" id="email_error"></p>
+      </div>
+
+      <div class="input_container">
+        <label for="password">Password: </label>
+        <input
+          type="text"
+          id="password"
+          name="password"
+          placeholder="********"
+        />
+        <p class="error" id="password_error"></p>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const nameInput = document.getElementById("name");
+      const usernameInput = document.getElementById("username");
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+      const form = document.getElementById("form");
+      const errorElements = {
+        name: document.getElementById("name_error"),
+        username: document.getElementById("username_error"),
+        email: document.getElementById("email_error"),
+        password: document.getElementById("password_error"),
+      };
+
+      const nameRegex = /^[a-zA-Z]+(?: [a-zA-Z]+)+$/;
+      const usernameRegex = /^[a-zA-Z][a-zA-Z0-9-]+$/;
+      const emailRegex = /^[\w-\.]+@(?:[\w]+\.)+[\w]{2,4}$/;
+      const passwordRegex =
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$!%*?&])[A-Za-z\d@#$!%*?&]{8,20}$/;
+
+      function validate() {
+        resetErrors();
+
+        const name = nameInput.value.trim();
+        const username = usernameInput.value.trim();
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        const errors = {};
+
+        if (!name) errors.name = "Name is required!";
+        else if (!nameRegex.test(name)) errors.name = "Name is Invalid!";
+
+        if (!username) errors.username = "Username is required!";
+        else if (!usernameRegex.test(username))
+          errors.username = "Username is Invalid!";
+
+        if (!email) errors.email = "Email is required!";
+        else if (!emailRegex.test(email)) errors.email = "Email is Invalid!";
+
+        if (!password) errors.password = "Password is required!";
+        else if (!passwordRegex.test(password))
+          errors.password = "Password is Invalid!";
+
+        if (Object.keys(errors).length !== 0) {
+          showErrors(errors);
+          addOnInputEvent();
+          return false;
+        }
+
+        return true;
+      }
+
+      function showErrors(errors) {
+        Object.keys(errors).forEach((key, _) => {
+          errorElements[key].textContent = errors[key];
+          errorElements[key].classList.add("show");
+        });
+      }
+
+      function resetErrors() {
+        for (const errorElement of Object.values(errorElements)) {
+          errorElement.classList.remove("show");
+        }
+      }
+
+      function addOnInputEvent() {
+        const onInput = form.getAttribute("oninput");
+        if (!onInput) {
+          form.setAttribute("oninput", "validate();");
+        }
+      }
+    </script>
+  </body>
+</html>

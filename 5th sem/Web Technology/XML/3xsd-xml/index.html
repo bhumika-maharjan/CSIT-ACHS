@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Fetcher</title>
+    <style>
+      th,
+      td {
+        border: 1px solid black;
+        padding: 10px 20px;
+      }
+      table {
+        width: 80%;
+        margin: 30px 10%;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Product Fetcher</h2>
+    <button id="fetchProduct">Fetch Product</button>
+
+    <table id="productDetails">
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Stock</th>
+      </tr>
+    </table>
+
+    <script>
+      const btn = document.getElementById("fetchProduct");
+      const table = document.getElementById("productDetails");
+
+      btn.addEventListener("click", fetchProduct);
+
+      function fetchProduct() {
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = () => onFetch(xhr);
+        xhr.open("GET", "get-product.php", true);
+        xhr.send();
+      }
+
+      function onFetch(xhr) {
+        try {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              console.log(xhr.responseText);
+              let xmlResponse = xhr.responseXML;
+              let products = xmlResponse.getElementsByTagName("product");
+              for (product of products) {
+                table.innerHTML += `<tr>
+                <td>${product.getElementsByTagName("name")[0].textContent}</td>
+                <td>${product.getElementsByTagName("price")[0].textContent}</td>
+                <td>${
+                  product.getElementsByTagName("description")[0].textContent
+                }</td>
+                <td>${product.getAttribute("stock")}</td>
+              </tr>`;
+              }
+            }
+          }
+        } catch (error) {
+          console.log(error);
+          document.body.innerHTML += `<p style="color: red;">Error fetching product.<br/></p>`;
+          document.body.innerHTML += `<p style="color: red;">Server Error: ${xhr.responseText}<br/></p>`;
+          document.body.innerHTML += `<p style="color: red;">Client Error: ${error}</p>`;
+        }
+      }
+    </script>
+  </body>
+</html>

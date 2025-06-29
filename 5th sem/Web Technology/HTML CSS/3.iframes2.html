@@ -1,0 +1,30 @@
+<!-- Why inline frames are used?
+Create a HTML page containing iframe within a paragraph.
+The iframe have source to http://www.tuiost.edu.np and
+its height and width are 200px and 400px respectively. -->
+
+<!-- An inline frame is used to embed another document
+within the current HTML document.
+The HTML <iframe> tag specifies an inline frame. -->
+
+<html>
+  <head>
+    <title>TU</title>
+  </head>
+  <body>
+    <p>
+      Institute of Science and Technology (IoST) is one of the oldest and the
+      largest technical institutes in TU with 13 Central Departments,1 School,
+      24 constituent campuses and 89 affiliated campuses. For more details visit
+      our website:
+      <iframe
+        src="http://www.tuiost.edu.np"
+        width="400px"
+        height="200px"
+        title="tuiost website"
+      >
+        Sorry your browser does not support inline frames.
+      </iframe>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>HTML Canvas Example</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>HTML Canvas Examples</h2>
+
+    <!-- Creating a canvas -->
+    <canvas id="myCanvas" width="500" height="400"></canvas>
+
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      ctx.fillStyle = "orange"; // Fill color
+      ctx.strokeStyle = "blue"; // Stroke color
+      ctx.lineWidth = 1; // Stroke width
+
+      // Rectangle
+      ctx.fillRect(10, 10, 100, 50); // x, y, width, height
+      ctx.strokeRect(10, 10, 100, 50); // x, y, width, height
+
+      // Draw a circle
+      ctx.beginPath();
+      ctx.arc(200, 100, 50, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+
+      // Draw a line
+      ctx.moveTo(50, 200);
+      ctx.lineTo(200, 300);
+      ctx.stroke();
+
+      // Draw text
+      ctx.fillStyle = "black";
+      ctx.font = "30px Arial";
+      ctx.strokeText("Hello, Canvas!", 300, 50);
+    </script>
+  </body>
+</html>

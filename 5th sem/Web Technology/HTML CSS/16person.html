@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Function</title>
+    </head>
+    <body>
+        <script>
+            // function Person(name){ //Person becomes a class because of capital
+            //     this.name = name;
+            // }
+            // const person1 = new Person("Rame");
+            // console.log(person1);
+
+            // person1 = { //person1 is object
+            //     name: "Ram",
+            //     printName: function () {
+            //         console.log(this.name);
+            //     },
+            // };
+
+            person1 = { //person1 is object
+                name: "Ram",
+                printName: () => {
+                    console.log(this.name);
+                },
+            }; //to use this, we must use normal function
+
+            person1.printName();
+        </script>
+    </body>
+</html>

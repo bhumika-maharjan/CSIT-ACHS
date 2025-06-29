@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>List Styles</title>
+    <style>
+      ul {
+        /* list-style-type: square; */
+        /* list-style-position: inside; */
+        /* list-style-image: url("/css/square.png"); */
+        list-style: inside url("cat.jpg");
+        /* list-style: circle inside; */
+      }
+
+      ol {
+        list-style: inside upper-alpha;
+      }
+
+      li {
+        background: #f0f0f0;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Apple</li>
+      <li>Ball</li>
+    </ul>
+
+    <ol>
+      <li>Apple</li>
+      <li>Ball</li>
+    </ol>
+  </body>
+</html>
+
+<!-- ul {
+  list-style: circle inside url('path/to/image.png');
+  ie
+  list-style: <list-style-type> <list-style-position> <list-style-image>;
+
+}
+ -->

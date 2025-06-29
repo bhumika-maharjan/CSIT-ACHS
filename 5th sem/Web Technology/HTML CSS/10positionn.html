@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Position CSS</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .box1 {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background: #000;
+        left: 100px;
+        /* right: 20px; */
+        top: 100px;
+      }
+      .box2 {
+        /* position: relative; */
+        /* position: fixed; */
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: yellow;
+        /* top: 0; */
+        right: 0;
+      }
+      .box2-child {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+
+      .box3 {
+        position: fixed;
+        left: 20px;
+        top: 20px;
+        width: 50px;
+        height: 50px;
+        background: blue;
+        z-index: 50;
+      }
+
+      .box4 {
+        background: yellow;
+        position: relative;
+      }
+
+      .box4-child {
+        position: sticky;
+        background: #000;
+        height: 50px;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+
+    <div class="box2">
+      <div class="box2-child"></div>
+    </div>
+
+    <div class="box3"></div>
+
+    <div style="height: 200vh"></div>
+
+    <div class="box4">
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <div class="box4-child"></div>
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </div>
+
+    <div style="height: 200vh"></div>
+  </body>
+</html>

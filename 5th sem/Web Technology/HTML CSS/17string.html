@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>String Object</title>
+    </head>
+    <body>
+        <script>
+            let str = "hello, world!   ";
+
+            // let str2 = new String("hello, world"); //new makes object
+            // let str3 =  String("hello, world" );
+            // console.log(str);
+            // console.log(str2);
+            // console.log(str3);
+
+            console.log(str.length);
+            console.log(str.charAt(1));
+            console.log(str.includes("world"))
+            console.log (str.indexOf("o"));
+            console.log (str.lastIndexOf("o"));
+            console.log(str.slice(7, 12));
+            console.log(str.slice(7, -4));
+
+            console.log(str.substring(7, 12));
+            console.log(str.substring(12, 7));
+            console.log(str.substring(7, -1));
+
+            console.log(str.split(","));
+            console.log(str.toUpperCase());
+
+            console.log(str.trim());
+            console.log(str.replace("world", "js"));
+
+            console.log(str.startsWith("hello"));
+            console.log(str.endsWith("world", 12)); //12 gives !
+
+            let country = "Nepal";
+            let city = "Kathmandu";
+            let address = city.concat(",", country,  "!");
+
+            console.log(address);
+
+        </script>
+    </body>
+</html>

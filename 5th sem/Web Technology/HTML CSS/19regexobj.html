@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Regex Object</title>
+    </head>
+    <body>
+        <script>
+            // let regex = new RegExp(/./); //, will match every strings except new liine
+            // let regex = new RegExp(/\./g);  //"\ WILL match . too"
+            // let regex = new RegExp(/\n/g);  //"\ WILL match newline only",put \t for tab etc
+            // let regex = new RegExp(/\S/g); //d for digits g for global, s for white space, w will word  W is opposite of w capital letters will work opposite of small ones
+            // let regex = new RegExp(/[^abc]/g); //[a-e] will match from a to e, ^ represents not, [abc] matches a,b,c
+            // let regex = new RegExp(/[^Hello]/g);//checks if string started from hello
+            // let regex = new RegExp(/abc$/g); //checks if string ends with abc
+            // let regex = new RegExp(/\Bppl\B/g); // \b$  checks if therse any alphabet infront or at back
+            // let regex = new RegExp(/\\/g);
+            // let str ="Hello123 apple ball car_@ \n \t \r . abc";
+
+
+            // let regex = new RegExp(/a+?/g); // a* matches 0 or more, a? matches each, a{2} matches only 2, a{2,} matches 2 or more a, a{2,3} matches 2 or 3
+            // let str = "aa aaa a aaaaa";
+            // let regex = new RegExp(/ab|cd/g); 
+            // let str = "abc ab cd";
+
+
+            // let regex = new RegExp(/(quick) (brown) (fox)/); 
+            // let str = "The quick brown fox jumps over the lazy dog";
+
+            // let regex = new RegExp(/(\d{4})-(\d{2})-(\d{2})/); // whole string + year, month, day separated
+            // let str = "2024-06-23";
+
+
+            // console.log(str.match(regex)); // regex should always be inside (/ /)
+
+            // const reformattedDate = str.replace(regex, "$3/$2/$1");
+            // console.log(reformattedDate)
+
+            let regex = new RegExp(/(foo)(bar)\2\1/); // whole string + year, month, day separated
+            let str = "foobarbarfoo";
+
+
+            console.log(str.match(regex)); // regex should always be inside (/ /)
+
+            
+        </script>
+    </body>
+</html>

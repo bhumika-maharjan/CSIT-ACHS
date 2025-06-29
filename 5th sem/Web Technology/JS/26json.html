@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>JSON</title>
+    <style>
+      .hq {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      fetch("26data.json")
+        .then((response) => response.json())
+        .then((data) => {
+          data.persons.forEach(function (person, index) {
+            document.body.innerHTML += `<h1>${person.name}</h1>`;
+          });
+        })
+        .catch(
+          (error) =>
+            (document.body.innerHTML += `<h1 style='color: red'>Error Occured</h1>`)
+        );
+
+      async function getJson() {
+        try {
+          const response = await fetch("26data.json");
+          const data = await response.json();
+          data.persons.forEach(function (person, index) {
+            document.body.innerHTML += `<h1>${person.name}</h1>`;
+          });
+        } catch (error) {
+          document.body.innerHTML += `<h1 style='color: red'>Error Occured 2</h1>`;
+        }
+      }
+      getJson();
+    </script>
+  </body>
+</html>

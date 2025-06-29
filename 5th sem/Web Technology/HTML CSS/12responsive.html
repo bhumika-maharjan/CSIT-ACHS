@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive design</title>
+    <style>
+        .parent {
+            grid-template-columns: repeat(12,1fr);
+            gap: 20px;
+            height: 100vh;
+            display: grid;
+        }
+        .child {
+            background: red;
+            grid-column: span 3;
+        }
+        @media screen and (max-width: 800px) {
+            .child {
+                grid-column: span 6;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            .child {
+                grid-column: span 12;
+            }
+        }
+        @media print {
+            .child {
+                background: purple;
+            }
+        }
+        @media screen and (orientation: landscape) {
+            .parent {
+                background: yellow;
+            }
+        }
+        /* for mobile
+            .child {
+            background: #000;
+            grid-column: span 12;
+        }
+        @media screen and (min-width: 500px) {
+            .child {
+                grid-column: span 6;
+            }
+        }
+            #desktop in mobile
+        @media screen and (min-width: 800px) {
+            .child {
+                grid-column: span 12;
+            }
+        }
+        */
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>
+</html>

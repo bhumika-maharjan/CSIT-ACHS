@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Grid CSS</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .parent {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        background: yellow;
+        gap: 20px;
+        justify-content: center;
+        align-content: center;
+        justify-items: stretch;
+        align-items: stretch;
+      }
+      .child {
+        background: red;
+        grid-column: span 2;
+        height: 100px;
+      }
+      @media screen and (max-width: 900px) {
+        .child {
+          grid-column: span 4;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .parent {
+          grid-template-columns: repeat(8, 1fr);
+        }
+      }
+      @media print {
+        .child {
+          background: #000;
+        }
+        * {
+          color: black;
+        }
+      }
+      @media screen and (orientation: landscape) {
+        .parent {
+          background: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
+
+<!-- For More: https://css-tricks.com/snippets/css/complete-guide-grid/ -->

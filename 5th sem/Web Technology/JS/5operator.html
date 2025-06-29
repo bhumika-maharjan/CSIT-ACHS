@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <title>Operators</title>
+  </head>
+  <body>
+    <script>
+      // comparision operator
+      let a = 1;
+      let b = "1";
+
+      const isEqual = a !== b; //  ===  &  ==
+      console.log(isEqual);
+
+      // logical operators
+      const isTrue = true && false; // ||
+      console.log(isTrue);
+      console.log(!isTrue);
+
+      // typeof operator
+      const type = typeof a;
+      console.log(type);
+      console.log(typeof type);
+
+      // spread operator   ---- needed in 7function.js
+      const originalArray = [1, 2, 3];
+      const copyarr1 = originalArray;
+      copyarr1[1] = 5;
+      console.log(copyarr1, originalArray);
+
+      const copyarr2 = [...originalArray];
+      copyarr2[1] = 7;
+      console.log(copyarr2, originalArray);
+
+      const array1 = [1, 2, 3];
+      const array2 = [4, 5, 6];
+      const concatenatedArray = [...array1, ...array2];
+      console.log(concatenatedArray);
+
+      const array = [1, 2, 3];
+      const newArray = [0, ...array, 4];
+      console.log(newArray);
+
+      const person1 = {
+        name: "Bhumika",
+        age: 20,
+      };
+      const person2 = person1;
+      person2.address = "Lalitpur";
+      console.log(person2);
+      console.log(person1);
+
+      const person3 = { ...person1 };
+      person3.address = "Kathmandu";
+      console.log(person3);
+
+      const person4 = { ...person1, address: "Bhaktapur", isDead: false };
+      console.log(person4);
+
+      const obj1 = { a: 1, b: 2 };
+      const obj2 = { c: 3, d: 4 };
+      const mergedObject = { ...obj1, ...obj2 };
+      console.log(mergedObject);
+
+      const numbers = [1, 2, 3];
+      const add1 = (a, b, c) => a + b + c;
+      console.log(add1(...numbers));
+
+      const add2 = (...args) => args[0] + args[1] + args[2];
+      console.log(add2(1, 2, 3));
+      console.log(add2(...numbers));
+
+      function add3(...args) {
+        return arguments[0] + arguments[1] + arguments[2];
+        // return args[0] + args[1] + args[2];
+      }
+      console.log(add3(1, 2, 3));
+      console.log(add3(...numbers));
+
+      const str = "hello";
+      const chars = [...str];
+      console.log(chars); // ['h', 'e', 'l', 'l', 'o']
+    </script>
+  </body>
+</html>

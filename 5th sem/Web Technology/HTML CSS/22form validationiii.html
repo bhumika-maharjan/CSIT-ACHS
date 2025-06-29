@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Sign up Form</title>
+    </head>
+    <body>
+        <form action="" name="loginform" onsubmit="return validateForm();">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            <br><br>
+            <label for="email">Email:</label>
+            <input type = "email" name="email" id="email">
+            <br> <br>
+            <label for="password">Password:</label>
+            <input type = "password" name="password" id="password">
+            <br> <br>
+            <label for="age">Age:</label>
+            <input type = "number" step = "1"  id="age" name="age" >
+            <br> <br>
+            <button type="submit">Sign Up</button>
+        </form>
+        <script>
+             function validateForm() {
+                const name= document.getElementById("name").value;
+                const email= document.getElementById("email").value;
+                const password= document.getElementById("password").value;
+                const age= document.getElementById("age").value;
+                if(!name) {
+                    alert("Name is required");
+                    return false;
+                } else if (!email) {
+                    alert("Email is required");
+                    return false;
+                } else if (!/^[a-zA-Z]+[a-zA-Z0-9-._]+@[a-z]+\.[a-zA-Z.]+$/.test(email)){
+                    alert("Invalid Email");
+                    return false;
+                } else if (!password) {
+                    alert("Password is required");
+                    return false; 
+                } else if (password.length < 6) {
+                    alert("password should be at least 6 digit long");
+                    return false;
+                } else if (!/^[a-zA-Z]+.*\d+$/.test(password)) {
+                    alert("password should start with alphabet and end with digit");
+                    return false;
+                } else if (!age) {
+                    alert("age is required");
+                    return false;
+                } else if (age<8 || age>60){
+                    alert("age should be between 60 and 8");
+                    return false;
+                }
+
+                
+                
+                return true;
+            }
+
+        </script>
+    </body>
+</html>

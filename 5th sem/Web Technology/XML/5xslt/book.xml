@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<bookstore>
+  <book>
+    <title>Harry Potter</title>
+    <author>J.K. Rowling</author>
+    <price>29.99</price>
+  </book>
+  <book>
+    <title>Lord of the Rings</title>
+    <author>J.R.R. Tolkien</author>
+    <price>39.99</price>
+  </book>
+</bookstore>

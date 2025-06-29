@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Full Form Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+
+        .input-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .radio-group {
+            border: 1px solid black;
+            color: black;
+            border-radius: 5px;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input, select, textarea {
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            width: auto;
+            margin-top: 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form id="user-form" method="post" action="">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <div class="input-wrapper">
+                <input type="text" id="name" name="name" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <div class="input-wrapper">
+                <input type="email" id="email" name="email" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <div class="input-wrapper">
+                <input type="password" id="password" name="password" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <div class="input-wrapper">
+                <input type="date" id="dob" name="dob" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <div class="input-wrapper">
+                <input type="text" id="phone" name="phone" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Sex:</label>
+            <div class="input-wrapper">
+                <div class="radio-group">
+                    <label><input type="radio" name="sex" value="male" /> Male</label>
+                    <label><input type="radio" name="sex" value="female" /> Female</label>
+                    <label><input type="radio" name="sex" value="other" /> Other</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <div class="input-wrapper">
+                <select id="country" name="country">
+                    <option value="">Select Country</option>
+                    <option value="nepal">Nepal</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <div class="input-wrapper">
+                <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+        </div>
+
+        <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            $('#user-form').submit(function (e) {
+                e.preventDefault();
+                $(".error").remove();
+
+                let isValid = true;
+
+                const name = $('#name').val().trim();
+                const email = $('#email').val().trim();
+                const password = $('#password').val().trim();
+                const dob = $('#dob').val().trim();
+                const phone = $('#phone').val().trim();
+                const sex = $('input[name="sex"]:checked').val();
+                const country = $('#country').val();
+                const message = $('#message').val().trim();
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                const phoneRegex = /^\d{10}$/;
+                const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+
+                if (name.length < 1) {
+                    $('#name').parent().append('<span class="error">Name is required</span>');
+                    isValid = false;
+                }
+
+                if (email.length < 1) {
+                    $('#email').parent().append('<span class="error">Email is required</span>');
+                    isValid = false;
+                } else if (!emailRegex.test(email)) {
+                    $('#email').parent().append('<span class="error">Enter a valid email address</span>');
+                    isValid = false;
+                }
+
+                if (password.length < 8) {
+                    $('#password').parent().append('<span class="error">Password must be at least 8 characters long</span>');
+                    isValid = false;
+                } else if (!passwordRegex.test(password)) {
+                    $('#password').parent().append('<span class="error">Password must contain uppercase, lowercase, number, and special character</span>');
+                    isValid = false;
+                }
+
+                if (!dob) {
+                    $('#dob').parent().append('<span class="error">Date of birth is required</span>');
+                    isValid = false;
+                }
+
+                if (phone.length < 1) {
+                    $('#phone').parent().append('<span class="error">Phone number is required</span>');
+                    isValid = false;
+                } else if (!phoneRegex.test(phone)) {
+                    $('#phone').parent().append('<span class="error">Phone number must be 10 digits</span>');
+                    isValid = false;
+                }
+
+                if (!sex) {
+                    $('.radio-group').parent().append('<span class="error">Please select your sex</span>');
+                    isValid = false;
+                }
+
+                if (country === "") {
+                    $('#country').parent().append('<span class="error">Please select a country</span>');
+                    isValid = false;
+                }
+
+                if (message.length < 10) {
+                    $('#message').parent().append('<span class="error">Message must be at least 10 characters</span>');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    alert('Form submitted successfully');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

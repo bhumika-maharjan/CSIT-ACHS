@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Jquery vs Modern Js</title>
+  </head>
+  <body>
+    <script src="/jquery-3.7.1.min.js"></script>
+    <script>
+      let array = [1, 2, 3, 4];
+
+      $.each(array, function (index, value) {
+        console.log("Index: " + index + ", Value: " + value);
+      });
+
+      array.forEach(function (value, index) {
+        console.log("Index: " + index + ", Value: " + value);
+      });
+
+      let object1 = { name: "John" };
+      let object2 = { age: 30, city: "New York" };
+      let extendedObject = $.extend({}, object1, object2);
+      let extendedObject2 = { ...object1, ...object2 };
+      console.log(extendedObject);
+      console.log(extendedObject2);
+    </script>
+  </body>
+</html>

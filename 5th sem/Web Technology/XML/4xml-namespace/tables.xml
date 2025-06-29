@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tables>
+    <f:table xmlns:f="http://www.fruits.com">
+        <f:apples>5</f:apples>
+        <f:bananas>4</f:bananas>
+    </f:table>
+
+    <s:table xmlns:s="http://www.structure.com">
+        <s:width>80</s:width>
+        <s:length>120</s:length>
+    </s:table>
+</tables>

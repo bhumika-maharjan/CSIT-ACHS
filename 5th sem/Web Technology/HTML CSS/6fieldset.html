@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Input</title>
+        <style>
+            div {
+                padding: 7px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="/6fieldset.html" target="_blank" enctype="application/x-www-form-urlencoded">
+            <fieldset>
+                <legend>Personal Details</legend>
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" required maxlength="5" autofocus> <br> <br>
+      
+                <label for="email">Email: </label>
+                <input type="email" name="email" placeholder="jondoe@gmail.com"> <br><br>
+
+
+                <label for="message"></label>
+                <textarea name="message" id="message" rows="4" style="resize: vertical;"></textarea>
+
+            </fieldset>
+            <fieldset>
+                <legend>Additional Information</legend>
+                <label for="">Mother's Name</label>
+                <input type="text" > <br><br>
+
+                <label for="">Father's Name</label>
+                <input type="text" >  <br><br>
+            </fieldset>
+
+        <button type="submit">Submit</button> 
+            
+        </form>
+        
+    </body>
+</html>

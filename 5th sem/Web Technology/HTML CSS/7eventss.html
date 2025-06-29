@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <title>Event Examples</title>
+  </head>
+  <body onload="handleload();" onunload="handleunload();">
+    <form onsubmit="handleFormSubmit(); return false;">
+      <label for="text">Text Input:</label>
+      <input
+        type="text"
+        id="text"
+        onchange="handleInputChange();"
+        onblur="handleInputBlur();"
+        onfocus="handleInputFocus();"
+        onkeydown="handleKeyDown();"
+        onkeypress="handleKeyPress();"
+        onkeyup="handleKeyUp();"
+        onselect="handleSelect();"
+      />
+      <button type="submit">Submit</button>
+      <button type="reset" onclick="handleFormReset();">Reset</button>
+    </form>
+
+    <button
+      onclick="handleClick();"
+      ondblclick="handleDoubleClick();"
+      onmousedown="handleMouseDown();"
+      onmousemove="handleMouseMove();"
+      onmouseout="handleMouseOut();"
+      onmouseup="handleMouseUp()"
+    >
+      Click or Double-click me
+    </button>
+
+    <br />
+
+    <a href="/1div.html">Go</a>
+
+    <script>
+      function handleload() {
+        console.log("Page loaded!");
+      }
+
+      function handleunload() {
+        console.log("Page unloaded!");
+      }
+
+      function handleFormSubmit() {
+        console.log("Form submitted!");
+      }
+
+      function handleInputChange() {
+        console.log("Value changed!");
+      }
+
+      function handleInputBlur() {
+        console.log("Input blurred!");
+      }
+
+      function handleInputFocus() {
+        console.log("Input focused!");
+      }
+
+      function handleKeyDown() {
+        console.log("Key down!");
+      }
+
+      function handleKeyPress() {
+        console.log("Key pressed!");
+      }
+
+      function handleKeyUp() {
+        console.log("Key up!");
+      }
+
+      function handleFormReset() {
+        console.log("Form reset!");
+      }
+
+      function handleClick() {
+        console.log("Clicked!");
+      }
+
+      function handleDoubleClick() {
+        console.log("Double-clicked!");
+      }
+
+      function handleMouseDown() {
+        console.log("Mouse button down!");
+      }
+
+      function handleMouseUp() {
+        console.log("Mouse button up!");
+      }
+
+      function handleMouseMove() {
+        console.log("Mouse moving!");
+      }
+
+      function handleMouseOut() {
+        console.log("Mouse out!");
+      }
+
+      function handleSelect() {
+        console.log("Text selected");
+      }
+    </script>
+  </body>
+</html>

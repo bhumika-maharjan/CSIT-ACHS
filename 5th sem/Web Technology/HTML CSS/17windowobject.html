@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Window Object</title>
+    </head>
+    <body>
+        <button id="open">Open New window</button>
+        <div style="height: 200vh"></div>
+        <script>
+            console.log(window.innerWidth, window.innerHeight);
+            console.log(innerWidth, innerHeight);
+
+            const openbtn = document.getElementById("open");
+
+            openbtn.addEventListener("click", function () {
+                window.open ("https://www.apple.com");
+            });
+
+            window.addEventListener("resizer", function () {
+                console.log(innerWidth, innerHeight);
+            });
+            window.addEventListener("scroll", function () {
+                console.log(scrollY);
+            });
+            const user = {
+                name: "john doe",
+                age: 30,
+                email: "bhumika2060@gmail.com"
+            };
+
+            window.localStorage.setItem("username", JSON.stringify(user));
+
+            const userData =  JSON.parse(localStorage.getItem("username"));
+
+            console.log(userData);
+
+            // window.localStorage.setItem("username", "bhumika");
+        </script>
+    </body>
+</html>

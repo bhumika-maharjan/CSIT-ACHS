@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Pop up</title>
+    </head>
+    <body>
+        <h1>Project 1</h1>
+        <!-- <button onclick="deleteProject();">Delete</button>
+        <script>
+            function deleteProject() {
+                const confirmation = confirm("Are you sure?");
+                if (confirmation) {
+                    //delete
+                    console.log("Deleted");
+                }
+                else {
+                    alert("Deletion Cancelled");
+                }
+            } -->
+
+  <!-- using prompt -->
+        <button onclick="deleteProject();">Delete</button>
+        <script>
+            function deleteProject() {
+                const confirmation = confirm("Are you sure?");
+                if (confirmation) {
+                    const projectName = prompt("enter project name for verification");
+                    if (projectName == 'Project 1') {
+                        document.body.removeChild(document.getElementsByTagName("h1")[0]);
+                        // console.log("Delete h1");
+                    }else {
+                        alert ("project name nott matched");
+                    }
+                    
+                }
+                else {
+                    alert("Deletion Cancelled");
+                }
+            }
+        </script>
+    </body>
+</html>

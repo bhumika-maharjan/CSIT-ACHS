@@ -1,0 +1,73 @@
+<!-- Write HTML script to create HTML form as below and  -->
+<!-- perform form validation using JavaScript. -->
+<!-- The validation should be as; the username should be -->
+<!-- of length at least 4 and is required. The password  -->
+<!-- should start with a character and end with # and  -->
+<!-- is required. The country and gender should be checked. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <form name="myForm" onsubmit="return validateForm()">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" /><br /><br />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" /><br /><br />
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="">Select a country</option>
+        <option value="Nepal">Nepal</option>
+        <option value="India">India</option>
+      </select>
+      <br /><br />
+
+      <label for="gender">Gender</label>
+      <input type="radio" id="male" name="gender" value="M" />
+      <label for="male">M</label>
+      <input type="radio" id="female" name="gender" value="F" />
+      <label for="female">F</label><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      function validateForm() {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        let country = document.getElementById("country").value;
+        // let genderMale = document.getElementById("male").checked;
+        // let genderFemale = document.getElementById("female").checked;
+        let gender = document.forms["myForm"]["gender"].value;
+
+        console.log(gender);
+
+        if (username.length < 4) {
+          alert("Username must be at least 4 characters long.");
+          return false;
+        }
+
+        if (!/^[a-zA-Z].*#$/.test(password)) {
+          alert("Password must start with a character and end with #.");
+          return false;
+        }
+
+        if (country === "") {
+          alert("Please select a country.");
+          return false;
+        }
+
+        if (gender === "") {
+          alert("Please select a gender.");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>

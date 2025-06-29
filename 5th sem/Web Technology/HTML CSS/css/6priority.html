@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>CSS Priority</title>
+    <link rel="stylesheet" href="/css/6priority.css" />
+    <link rel="stylesheet" href="/css/6priority2.css" />
+    <style>
+      h1 {
+        color: red;
+        color: yellow !important;
+      }
+      #hi__heading {
+        /* color: red; */
+        color: hsl(0, 100%, 50%);
+      }
+      .heading2 {
+        color: blueviolet;
+      }
+      h2 {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: blue">Hello</h1>
+    <h2 class="heading2" id="hi__heading">Hi</h2>
+  </body>
+</html>

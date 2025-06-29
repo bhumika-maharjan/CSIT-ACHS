@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Grid CSS</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .parent {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(4, 100px);
+        height: 100vh;
+        background: yellow;
+        gap: 20px;
+        justify-content: center;
+        align-content: center;
+        justify-items: stretch;
+        align-items: stretch;
+      }
+      .child {
+        /* height: 50px; */
+        /* width: 50%; */
+        background: #000;
+      }
+      .child:nth-child(2) {
+        /* grid-row-start: 1; */
+        /* grid-row-end: 3; */
+        grid-row: 1 / 3;
+        grid-column: 2 / 4;
+        /* height: unset; */
+        /* align-self: stretch; */
+      }
+      .child:nth-child(5) {
+        /* align-self: start; */
+      }
+      .child:last-child {
+        grid-column: 2 / 4;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+      <div class="child"></div>
+    </div>
+  </body>
+</html>
+
+<!-- For More: https://css-tricks.com/snippets/css/complete-guide-grid/ -->

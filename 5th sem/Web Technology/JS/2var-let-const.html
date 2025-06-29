@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Var Let & Const</title>
+  </head>
+  <body>
+    <script>
+      // you can redeclare variable with same name with var
+      // weird
+      var myname = "Bhumika";
+      console.log(myname);
+      myname = "Bhumi";
+      console.log(myname);
+      var myname = "Vumika";
+      console.log(myname);
+
+      // you cannot redeclare variable with same name with let
+      let mysurname = "Maharjan";
+      console.log(mysurname);
+      mysurname = "Mhrjn";
+      console.log(mysurname);
+      //   let mysurname = "aarko aalu"; //  <------------------- error
+      //   console.log(mysurname);
+
+      // var is not scoped within block
+      // block means within curly braces like of for loops
+
+      var gods = ["ram", "laxman", "krishna"];
+      var weapons = ["bow", "arrow", "sudarsan"];
+
+      for (var item of gods) {
+        // make it let
+        console.log(item);
+        for (var item of weapons) {
+          // make it let
+          //
+        }
+        console.log(item);
+      }
+
+      const mymiddlename = "NULL";
+      console.log(mymiddlename);
+      //   mymiddlename = "pidalu"; //  <----------------- error
+      //   console.log(mymiddlename);
+
+      const myarray = ["apple", "ball"];
+      console.log(myarray);
+      myarray.push("cat");
+      console.log(myarray);
+      myarray.pop();
+      console.log(myarray);
+
+      const myarray2 = Array(5);
+      console.log(myarray2);
+      myarray2[0] = "apple";
+      console.log(myarray2);
+    </script>
+  </body>
+</html>
+
+
+
+
+
+

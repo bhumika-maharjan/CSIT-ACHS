@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Grid CSS</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .parent {
+        display: grid;
+        background: yellow;
+        height: 100vh;
+        grid-template-areas:
+          "sidebar header header header"
+          "sidebar body body body"
+          "sidebar body body body"
+          "sidebar body body body"
+          "sidebar footer footer footer";
+      }
+      header {
+        grid-area: header;
+        background: #c0c0c0;
+      }
+      nav {
+        grid-area: sidebar;
+        background: red;
+      }
+      div {
+        grid-area: body;
+        background: wheat;
+      }
+      footer {
+        grid-area: footer;
+        background: #c0c0c0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <header>Heading Section</header>
+      <nav>Some Links</nav>
+      <div>Some Contents</div>
+      <footer>Footer Section</footer>
+    </div>
+  </body>
+</html>

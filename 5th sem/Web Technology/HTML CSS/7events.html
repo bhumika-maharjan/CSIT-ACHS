@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Events</title>
+    </head>
+    <body>
+        <form action="" onsubmit="return false;"> 
+            <!-- onsubmit has many options -->
+            <input type="text" >
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+
+        <button onmousemove="handleEvents()">Click Me</button>
+        <!-- onmousemove has many option -->
+        <script>
+            function handleEvents() {
+                console.log("Event Triggered!")
+            }
+        </script>
+    </body>
+</html>

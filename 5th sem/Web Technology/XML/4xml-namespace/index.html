@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XML Namespace</title>
+  </head>
+  <body>
+    <button id="fetchData">Fetch Data</button>
+
+    <script>
+      const btn = document.getElementById("fetchData");
+
+      btn.addEventListener("click", fetchProduct);
+
+      function fetchProduct() {
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = () => onFetch(xhr);
+        xhr.open("GET", "tables.xml", true);
+        xhr.send();
+      }
+
+      function onFetch(xhr) {
+        try {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              let xmlDoc = xhr.responseXML;
+              let f = "http://www.fruits.com";
+              let s = "http://www.structure.com";
+
+              let apples = xmlDoc.getElementsByTagNameNS(f, "apples")[0]
+                .textContent;
+              let bananas = xmlDoc.getElementsByTagNameNS(f, "bananas")[0]
+                .textContent;
+              let width = xmlDoc.getElementsByTagNameNS(s, "width")[0]
+                .textContent;
+              let length = xmlDoc.getElementsByTagNameNS(s, "length")[0]
+                .textContent;
+
+              console.log("Apples:", apples);
+              console.log("Bananas:", bananas);
+              console.log("Width:", width);
+              console.log("Length:", length);
+            }
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    </script>
+  </body>
+</html>

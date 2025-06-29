@@ -1,0 +1,89 @@
+<!-- Design a form containing text box for username, password field for password, -->
+<!-- radio button for gender and checkbox for hobbies. Write a program for -->
+<!-- client-side validation of the form for the username and password field as -->
+<!-- required fields, length of username should be 5, the password should start with -->
+<!-- digit and end with $ the radio button and checkbox should be checked -->
+
+<html>
+  <head>
+    <title>Form validation</title>
+    <script>
+      function validateForm() {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        let gender = document.getElementsByName("gender");
+        let hobbies = document.getElementsByName("hobbies");
+        if (username == "") {
+          alert("username is required");
+          return false;
+        } else if (username.length != 5) {
+          alert("username must be 5 characters long");
+          return false;
+        } else if (password == "") {
+          alert("password is required");
+          return false;
+        } else if (!/^\d.*\$$/.test(password)) {
+          alert("password should start with digit and end with $");
+          return false;
+        } else if (
+          !(gender[0].checked || gender[1].checked || gender[2].checked)
+        ) {
+          alert("Please Select Your Gender");
+          return false;
+        } else if (
+          !(
+            hobbies[0].checked ||
+            hobbies[1].checked ||
+            hobbies[2].checked ||
+            hobbies[3].checked
+          )
+        ) {
+          alert("Please Select Atleast one of your hobby");
+          return false;
+        }
+
+        return true;
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>Client Side Form Validation Example</h2>
+    <form action="#" onsubmit="return validateForm()">
+      <div>
+        <label> Username: </label>
+        <input type="text" name="username" id="username" required />
+      </div>
+
+      <br />
+
+      <div>
+        <label> Password: </label>
+        <input type="password" name="password" id="password" required />
+      </div>
+
+      <br />
+
+      <div>
+        <label> Gender: </label>
+        <label><input type="radio" value="m" name="gender" /> Male </label>
+        <label><input type="radio" value="f" name="gender" /> Female </label>
+        <label><input type="radio" value="o" name="gender" /> Others </label>
+      </div>
+
+      <br />
+
+      <div>
+        <label> Hobbies: </label>
+        <label><input type="checkbox" name="hobbies" /> Reading </label>
+        <label><input type="checkbox" name="hobbies" /> Writing </label>
+        <label><input type="checkbox" name="hobbies" /> Playing </label>
+        <label><input type="checkbox" name="hobbies" /> Music </label>
+      </div>
+
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

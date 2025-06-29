@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Events with jQuery</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <br /><br />
+    <input type="text" placeholder="Type something" />
+
+    <p></p>
+
+    <script src="/jquery-3.7.1.min.js"></script>
+    <script>
+      $("h1")
+        .mouseenter(function () {
+          $(this).css("background", "red");
+        })
+        .mouseleave(function () {
+          $(this).css("background", "blue");
+        });
+
+      $("input").keyup(function () {
+        $("p").text($(this).val());
+      });
+    </script>
+  </body>
+</html>

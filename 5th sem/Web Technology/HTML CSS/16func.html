@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            greet("noone");
+            greet2("none");// it will cause error beacayse of arrow function
+            function greet(name) {
+                console.log("Hello " + name);
+            }
+            const greet2 = (name => console.log("hello " + name));
+
+            // greet("someone");
+            // greet2("someone")
+        </script>
+
+    </body>
+</html>

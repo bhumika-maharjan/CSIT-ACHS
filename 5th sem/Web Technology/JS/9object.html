@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: "Ram",
+        age: 23,
+        address: {
+          district: "Lalitpur",
+          country: "Nepal",
+        },
+        kill: function () {
+          this.isDead = true;
+        },
+      };
+      console.log(person);
+      person.age = 33;
+      console.log(person.age);
+      console.log(person["age"]);
+      person.isAlive = true;
+      person["isDead"] = false;
+      console.log(person);
+      console.log(person.isAlive);
+      delete person.isAlive;
+      console.log(person.isAlive);
+      person.kill();
+      console.log(person);
+
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+      const person2 = new Person("Ram", 50);
+      person2.isAlive = true;
+      console.log(person2);
+
+      const person3 = new Object({
+        name: "pine",
+        surname: "apple",
+        age: 1,
+      });
+
+      console.log(person3.age);
+      person3.age = 2;
+      person3.address = "spinach";
+      person3["root"] = "soil";
+      console.log(person3.age);
+      console.log(person3);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Object</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                name: "Bhumika",
+                age: 24,
+                isAlive: true,
+                address: {
+                    city: "Lalitpur",
+                    country: "Nepal",
+                },
+                kill: function (){
+                    this.isAlive = false;
+                },
+            };
+            console.log(person.age);
+            delete person.age;
+            console.log(person.age);
+            person.kill();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Jquery Animation</title>
+        <style>
+            #box {
+                background: #000;
+                height: 100px;
+                width: 100px;
+                position: relative;
+                animation: slideAnimation 3s ease-in-out 2s infinite;
+                /* transition: all 2000ms; */
+            }
+            /* .animation {
+                transform: translate(200px, 100px);
+            } */
+
+
+            @keyframes slideAnimation {
+                0% {
+                    transform: translate(0, 0);
+                    opacity: 1;
+                }
+                50% {
+                    transform: translate(200px, 100px);
+                    opacity: 0.4;
+                }
+                100% {
+                    transform: translate(0, 0);
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+        <script src="/jquery-3.7.1.min.js"></script>
+        <script>
+            // $("#box").slideUp(2000).slideDown(2000);
+
+
+            // $("#box")
+            // .slideUp(2000)
+            // .slideDown(2000)
+            // .delay(2000)
+            // .fadeOut(2000)
+            // .fadeIn(2000);
+
+
+            // function slideAnimation(){
+            //     $("#box").animate({
+            //     left: "+=200px",
+            //     top: "100px",
+            //     opacity: "0.5",
+            // },2000, ()=> alert("animation completed"))
+           
+            // }
+
+
+            // slideAnimation();
+
+
+
+
+            // function slideAnimation(){
+            //     $("#box").animate({
+            //     left: "+=200px",
+               
+            // },2000, )
+            // .animate({left: "-=200px"}, 2000, ()=> slideAnimation());
+           
+            // }
+
+
+            // slideAnimation();
+
+
+            $("#box").toggleClass("animation")
+           
+        </script>
+    </body>
+</html>
+
