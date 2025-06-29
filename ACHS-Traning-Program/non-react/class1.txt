@@ -1,0 +1,12 @@
+variable declaration, var, let, const
+conditions equality operator ===, short circuit
+loop, for of loop
+Object, Object,keys(), Object.values()
+function, arrow function()
+bracket notation for Object
+reduce, filter, map
+arrays, push, pop
+compile vs interpreted
+functional programming
+function is a first class citizen in javascript
+install nodejs

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <script>
+            let qns;
+            let index = 0;
+            qns = [
+            "Q.1 What is the largest planet",
+            "Q.2 What is the smallest planet?",
+            "Q.3 What is size of moon?",
+            "Q.4 What is the gravity of earth?",
+            "Q.5 What is a black hole?",
+            "Q.6 What is distance of sun from earth?",
+            ];
+
+
+            function qns_navigator(nav) {
+                document.getElementById("question").innerHTML = qns[index];
+                if (nav == "+" ) {
+                    index = index + 1;
+                } else if (nav == "-") {
+                    index = index - 1;
+                } else {
+                    index = index;
+                }
+            }
+        
+        </script>
+
+    </head>
+    <body>
+        <h2>Demo JavaScript Quiz</h2>
+
+        <p id="question">Click Next to start</p>
+        <button type="button" onclick="qns_navigator('-')">Previous</button>
+        <button type="button" onclick="qns_navigator('+')">Next</button>
+   
+    </body>
+</html>
