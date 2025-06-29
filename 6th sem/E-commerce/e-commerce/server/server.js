@@ -16,7 +16,7 @@ const shopSearchRouter = require("./routes/shop/search-routes");
 
 
 mongoose
-    .connect('mongodb+srv://bhumika1:MCMC2ug4JfN23ok9@cluster.gvyn5.mongodb.net/')
+    .connect('')
     .then(() => console.log('MongoDb connected'))
     .catch((error) => console.log(error));
 
