@@ -1,0 +1,51 @@
+from collections import deque
+
+class TreeNode:
+    def __init__(self, data):
+        self.data = data
+        self.children = []
+
+def construct_tree():
+    # Creating nodes
+    root = TreeNode(1)
+    child2 = TreeNode(2)
+    child3 = TreeNode(3)
+    child4 = TreeNode(4)
+    child5 = TreeNode(5)
+    child6 = TreeNode(6)
+    child7 = TreeNode(7)
+    child8 = TreeNode(8)
+    child9 = TreeNode(9)
+    child10 = TreeNode(10)
+    child11 = TreeNode(11)
+    child12 = TreeNode(12)
+
+    # Connecting nodes
+    root.children.extend([child2, child3, child4])
+    child2.children.extend([child5, child6])
+    child5.children.extend([child9, child10])
+    child4.children.extend([child7, child8])
+    child7.children.extend([child11, child12])
+
+    return root
+
+def bfs(root, target):
+    if root is None:
+        return False
+
+    queue = deque([root])
+
+    while queue:
+        node = queue.popleft()
+        if node.data == target:
+            return True
+        queue.extend(node.children)
+
+    return False
+
+# Construct the tree
+root_node = construct_tree()
+
+# Test BFS function
+target_data = 11
+print(bfs(root_node, target_data))  # Output: True
